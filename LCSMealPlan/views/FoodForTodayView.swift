@@ -13,7 +13,7 @@ struct FoodForTodayView: View {
     @State var lunch: String = ""
     
     // Creats an empty list of type string
-    @State var listOfMeals: [String] = []
+    @State var listOfMeals: [MealSuggestion] = []
     
     //MARK: Computed proprots
     
@@ -36,20 +36,21 @@ struct FoodForTodayView: View {
                 .padding()
             
             
-            //frhText(lunch)
+            //Text(lunch)
 
             
             Button(action: {
-                
+                let currentSuggestion = MealSuggestion(meal: lunch)
+                listOfMeals.append(currentSuggestion)
             }, label: {
                 Text("Submit")
             })
             .buttonStyle(.bordered)
             
-            List{
+            List {
                 
-                ForEach(listOfMeals) {currentlunch in
-                    Text(lunch)
+                ForEach(listOfMeals) { currentlunch in
+                    Text(currentlunch.meal)
                 }
                 
             }
@@ -65,3 +66,4 @@ struct FoodForTodayView_Previews: PreviewProvider {
         FoodForTodayView()
     }
 }
+
