@@ -12,6 +12,9 @@ struct FoodForTodayView: View {
     
     @State var lunch: String = ""
     
+    // Creats an empty list of type string
+    @State var listOfMeals: [String] = []
+    
     //MARK: Computed proprots
     
     var body: some View {
@@ -32,13 +35,24 @@ struct FoodForTodayView: View {
                       prompt: Text("Type something..."))
                 .padding()
             
+            
+            //frhText(lunch)
+
+            
             Button(action: {
-                // NOTE: Output will not be shown unless this app is run in the "full" simulator
-                print("Button was pressed")
+                
             }, label: {
                 Text("Submit")
             })
             .buttonStyle(.bordered)
+            
+            List{
+                
+                ForEach(listOfMeals) {currentlunch in
+                    Text(lunch)
+                }
+                
+            }
 
             Spacer()
         }
