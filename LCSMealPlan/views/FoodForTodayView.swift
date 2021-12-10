@@ -13,7 +13,7 @@ struct FoodForTodayView: View {
     @State var lunch: String = ""
     
     // Creats an empty list of type string
-    @State var listOfMeals: [MealSuggestion] = []
+    @State var listOfMeals: [String] = []
     
     //MARK: Computed proprots
     
@@ -40,8 +40,7 @@ struct FoodForTodayView: View {
 
             
             Button(action: {
-                let currentSuggestion = MealSuggestion(meal: lunch)
-                listOfMeals.append(currentSuggestion)
+                listOfMeals.append(lunch)
             }, label: {
                 Text("Submit")
             })
@@ -49,15 +48,20 @@ struct FoodForTodayView: View {
             
             List {
                 
-                ForEach(listOfMeals) { currentlunch in
-                    Text(currentlunch.meal)
+                ForEach(listOfMeals, id: \.self) { currentlunch in
+                    Text(currentlunch)
                 }
+                .onDelete(perform: removeRows)
                 
             }
 
             Spacer()
         }
         .padding(.horizontal)
+    }
+    
+    func removeRows(at offsets: IndexSet) {
+        listOfMeals.remove(atOffsets: offsets)
     }
 }
 

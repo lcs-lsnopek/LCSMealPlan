@@ -11,7 +11,6 @@
 		B27F699F27603ECC00FE4971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F699E27603ECC00FE4971 /* Assets.xcassets */; };
 		B27F69A227603ECC00FE4971 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F69A127603ECC00FE4971 /* Preview Assets.xcassets */; };
 		B29F5B66276390EA00023B43 /* FoodForTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F5B65276390EA00023B43 /* FoodForTodayView.swift */; };
-		B29F5B6A2763A2C500023B43 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F5B692763A2C500023B43 /* MealModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		B27F699E27603ECC00FE4971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B27F69A127603ECC00FE4971 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B29F5B65276390EA00023B43 /* FoodForTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodForTodayView.swift; sourceTree = "<group>"; };
-		B29F5B692763A2C500023B43 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				B27F699A27603EC700FE4971 /* LCSMealPlanApp.swift */,
-				B27F69A9276042FD00FE4971 /* Models */,
 				B27F69A8276042DF00FE4971 /* views */,
 				B27F699E27603ECC00FE4971 /* Assets.xcassets */,
 				B27F69A027603ECC00FE4971 /* Preview Content */,
@@ -76,14 +73,6 @@
 				B29F5B65276390EA00023B43 /* FoodForTodayView.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		B27F69A9276042FD00FE4971 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B29F5B692763A2C500023B43 /* MealModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29F5B66276390EA00023B43 /* FoodForTodayView.swift in Sources */,
-				B29F5B6A2763A2C500023B43 /* MealModel.swift in Sources */,
 				B27F699B27603EC700FE4971 /* LCSMealPlanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
