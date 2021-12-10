@@ -11,7 +11,7 @@ import SwiftUI
 struct LCSMealPlanApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FoodForTodayView()
         }
     }
 }
